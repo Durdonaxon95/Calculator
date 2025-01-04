@@ -47,21 +47,20 @@ double natija = Math.Pow(n, daraja);
 Console.WriteLine($"{n} ning {daraja} darajasi {natija} ga teng");
 
 //Harajatlar to'plami yig'indisini hisoblash.
-Console.WriteLine("Harajatlarni kiriting: ");
-decimal umumiyyigindi=0;
-string javob;
-do {
-    decimal miqdor=Convert.ToDecimal(Console.ReadLine());
+Console.WriteLine("Harajatlar sonini kiriting: ");
 
-    umumiyyigindi+=miqdor;
-    Console.WriteLine("Yana harajat qo'shasizmi? (ha/yo'q)");
-    javob = Console.ReadLine() ?? string.Empty;
-    if (javob != null)
-    {
-        javob = javob.ToLower();
-    }
-} while (javob=="ha");
-Console.WriteLine($"Umumiy harajatlar yig'indisi: {umumiyyigindi} so'm");
+int harajat = Convert.ToInt32(Console.ReadLine());
 
-;
+int[] harajatlar=new int[harajat];
+int umumiy=0;
+
+for (int i = 0; i < harajat; i++)
+{
+    Console.WriteLine($"{i+1}-harajatni kiriting: ");
+    harajatlar[i] = Convert.ToInt32(Console.ReadLine());
+    umumiy+=harajatlar[i];
+}
+
+Console.WriteLine($"Umumiy harajatlar yig'indisi: {umumiy} so'm");
+
 
