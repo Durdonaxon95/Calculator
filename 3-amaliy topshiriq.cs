@@ -1,5 +1,6 @@
 //Tub sonlar
 using System;
+using System.Diagnostics.CodeAnalysis;
 
 Console.WriteLine("Sonni kiriting: ");
 int son = Convert.ToInt32(Console.ReadLine());
@@ -62,5 +63,55 @@ for (int i = 0; i < harajat; i++)
 }
 
 Console.WriteLine($"Umumiy harajatlar yig'indisi: {umumiy} so'm");
+
+//Armstrong sonlarni topish.
+Console.WriteLine("Sonni kiriting: ");
+int Number = Convert.ToInt32(Console.ReadLine());
+if (Armstrng(Number))
+{
+    Console.WriteLine("Siz kiritgan son Armstrong son");
+}
+else
+{
+    Console.WriteLine("Siz kiritgan son Armstrong son emas");
+
+
+}
+static bool Armstrng(int number)
+{
+    int son = number;
+    int daraja = 0;
+    while (son > 0)
+    {
+        daraja++;
+        son /= 10;
+    }
+    son = number;
+    int sum = 0;
+    while (son > 0)
+    {
+        int qoldiq = son % 10;
+        sum += (int)Math.Pow(qoldiq, daraja);
+        son /= 10;
+    }
+    return sum == number;
+}
+
+// Sifatli bo'luvchilarni sonini topish.
+
+Console.WriteLine("Sonni kiriting: ");
+
+int sifatlison = Convert.ToInt32(Console.ReadLine());
+int sanoq1 = 0;
+for (int i = 2; i<= sifatlison; i++)
+{
+    if (sifatlison % i == 0)
+    {
+        sanoq1++;
+    }
+}
+Console.WriteLine($"{sifatlison} ning sifatli bo'luvchilari soni: {sanoq1}");
+
+
 
 
