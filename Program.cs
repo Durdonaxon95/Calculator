@@ -13,6 +13,7 @@
                 son += 2;
             }
             Console.WriteLine("1 dan 1000 gacha bo'lgan toq sonlar yig'indisi: " + yigindi);
+            
             //Array ichidagi eng katta va eng kichik qiymatlarni ko'paytmasini topish.
             int[] sonlar = { 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15 };
             int engKatta = sonlar[0];
