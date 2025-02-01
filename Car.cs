@@ -28,7 +28,6 @@ namespace CarApp
         public void CalculateDepreciation(int years)
         {
             decimal depreciation = Price;
-            //10% depreciation discount  year
             for (int i = 0; i < years; i++)
             {
                 depreciation = depreciation - (depreciation * 10 / 100);
