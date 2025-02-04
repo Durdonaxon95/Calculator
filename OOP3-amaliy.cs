@@ -1,7 +1,6 @@
 ﻿
 using System;
-
-namespace OOOAPP
+namespace OOPAPP
 {
     enum Baho { A = 5, B = 4, C = 3, D = 2, F = 1 }
 
@@ -109,8 +108,6 @@ namespace OOOAPP
             foreach (var bokschilar in bokschi)
             {
                 Console.WriteLine($"{bokschilar.Ism} {bokschilar.Familya}, Yosh: {bokschilar.Yoshi}, Vazn: {bokschilar.Ogirligi}kg");
-
-
             }
         }
     }
